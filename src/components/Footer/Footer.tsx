@@ -1,4 +1,3 @@
-import React from "react";
 import { address, email, telephone, wpp } from "../../Constants";
 import Logo from "../../assets/logo.svg";
 

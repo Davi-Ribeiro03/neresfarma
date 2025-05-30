@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Slide1 from "../../assets/slide1.png";
 
 const Slide = () => {

@@ -1,4 +1,3 @@
-import React, { useCallback, useState } from "react";
 import Map from "./Components/Map";
 
 const Location = () => {

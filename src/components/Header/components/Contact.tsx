@@ -1,4 +1,3 @@
-import React from "react";
 import { telephone, wpp } from "../../../Constants";
 
 const Contact = () => {
