@@ -1,3 +1,4 @@
+import { address } from "../../Constants";
 import Map from "./Components/Map";
 
 const Location = () => {
@@ -18,11 +19,7 @@ const Location = () => {
           </div>
           <div>
             <h3 className="font-semibold text-gray-800 mb-1">Endereço</h3>
-            <p className="text-gray-600">
-              Av. Principal, 1234
-              <br />
-              Centro, São Paulo - SP
-            </p>
+            <p className="text-gray-600">{address}</p>
           </div>
         </div>
         <div className="flex items-start">
@@ -34,9 +31,9 @@ const Location = () => {
               Horário de Funcionamento
             </h3>
             <p className="text-gray-600">
-              Segunda a Sábado: 8h às 22h
+              Segunda a Sábado: 7h às 21h
               <br />
-              Domingo: 9h às 18h
+              Domingo: 7h às 12h
             </p>
           </div>
         </div>

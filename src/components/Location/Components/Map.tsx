@@ -18,11 +18,11 @@ const Map = () => {
 
   return (
     isLoaded && (
-      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={18}>
-        <div className="h-5 w-5 bg-amber-800 z-20 -translate-y-10">
-          <i className="fas fa-map-marker-alt text-4xl text-blue-900 mb-4 "></i>
-        </div>
-      </GoogleMap>
+      <GoogleMap
+        mapContainerStyle={containerStyle}
+        center={center}
+        zoom={20}
+      ></GoogleMap>
     )
   );
 };
