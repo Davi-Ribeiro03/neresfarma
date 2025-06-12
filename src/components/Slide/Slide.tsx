@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Slide1 from "../../assets/slide1.png";
+import { openWpp } from "../../utils/openWpp";
 
 const Slide = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -72,7 +73,10 @@ const Slide = () => {
             {slides[currentSlide].title}
           </h1>
           <p className="text-xl mb-8">{slides[currentSlide].description}</p>
-          <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-medium transition duration-300 !rounded-button whitespace-nowrap cursor-pointer">
+          <button
+            className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-medium transition duration-300 !rounded-button whitespace-nowrap cursor-pointer"
+            onClick={() => openWpp()}
+          >
             {slides[currentSlide].cta}
           </button>
         </div>
