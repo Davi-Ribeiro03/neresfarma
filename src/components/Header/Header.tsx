@@ -3,7 +3,6 @@ import Contact from "./components/Contact";
 import Logo from "../../assets/logo.svg";
 
 const Header = () => {
-  const [searchQuery, setSearchQuery] = useState("");
   const [scrolled, setScrolled] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
 
@@ -37,10 +36,6 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(e.target.value);
-  };
 
   return (
     <>
