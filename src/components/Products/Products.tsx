@@ -39,7 +39,7 @@ const Products = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section id="products" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center mb-12 flex-col ">
           <div className="mb-4">
