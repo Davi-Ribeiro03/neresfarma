@@ -1,3 +1,5 @@
+import { openWpp } from "../../utils/openWpp";
+
 const Products = () => {
   const featuredProducts = [
     {
@@ -50,7 +52,7 @@ const Products = () => {
               Confira nossas ofertas especiais e produtos mais vendidos
             </p>
           </div>
-          <div className="flex space-x-2">
+          {/* <div className="flex space-x-2">
             <button className="px-4 py-2 border border-blue-900 text-blue-900 rounded-full hover:bg-blue-900 hover:text-white transition duration-300 !rounded-button whitespace-nowrap cursor-pointer">
               Medicamentos
             </button>
@@ -60,7 +62,7 @@ const Products = () => {
             <button className="px-4 py-2 border border-blue-900 text-blue-900 rounded-full hover:bg-blue-900 hover:text-white transition duration-300 !rounded-button whitespace-nowrap cursor-pointer">
               Higiene
             </button>
-          </div>
+          </div> */}
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -91,8 +93,11 @@ const Products = () => {
                     {product.price}
                   </span>
                 </div>
-                <button className="w-full bg-blue-900 hover:bg-blue-800 text-white py-2 rounded-full transition duration-300 !rounded-button whitespace-nowrap cursor-pointer">
-                  Adicionar ao Carrinho
+                <button
+                  className="w-full bg-blue-900 hover:bg-blue-800 text-white py-2 rounded-full transition duration-300 !rounded-button whitespace-nowrap cursor-pointer"
+                  onClick={() => openWpp()}
+                >
+                  Comprar
                 </button>
               </div>
             </div>
@@ -100,7 +105,10 @@ const Products = () => {
         </div>
 
         <div className="text-center mt-10">
-          <button className="px-8 py-3 border-2 border-blue-900 text-blue-900 font-medium rounded-full hover:bg-blue-900 hover:text-white transition duration-300 !rounded-button whitespace-nowrap cursor-pointer">
+          <button
+            className="px-8 py-3 border-2 border-blue-900 text-blue-900 font-medium rounded-full hover:bg-blue-900 hover:text-white transition duration-300 !rounded-button whitespace-nowrap cursor-pointer"
+            onClick={() => openWpp()}
+          >
             Ver todos os produtos
           </button>
         </div>
