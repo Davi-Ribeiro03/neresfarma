@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Contact from "./components/Contact";
 import Logo from "../../assets/logo.svg";
 
