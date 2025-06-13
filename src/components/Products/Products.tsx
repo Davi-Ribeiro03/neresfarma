@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { openWpp } from "../../utils/openWpp";
 
 const Products = () => {
@@ -39,6 +40,15 @@ const Products = () => {
         "https://readdy.ai/api/search-image?query=hydrating%20face%20mask%20package%20on%20clean%20white%20background%2C%20professional%20product%20photography%20with%20soft%20shadows%2C%20high%20resolution%20detailed%20image%20of%20premium%20skincare%20product&width=300&height=300&seq=7&orientation=squarish",
     },
   ];
+
+  const seeAllProductsMessage = useMemo(
+    () => "Olá, gostaria de olhar os produtos da loja!",
+    []
+  );
+
+  const productMessage = (name: string) => {
+    return "Olá, gostaria de comprar um(a) " + name;
+  };
 
   return (
     <section id="products" className="py-16 bg-gray-50">
@@ -95,7 +105,7 @@ const Products = () => {
                 </div>
                 <button
                   className="w-full bg-blue-900 hover:bg-blue-800 text-white py-2 rounded-full transition duration-300 !rounded-button whitespace-nowrap cursor-pointer"
-                  onClick={() => openWpp()}
+                  onClick={() => openWpp(productMessage(product.name))}
                 >
                   Comprar
                 </button>
@@ -107,7 +117,7 @@ const Products = () => {
         <div className="text-center mt-10">
           <button
             className="px-8 py-3 border-2 border-blue-900 text-blue-900 font-medium rounded-full hover:bg-blue-900 hover:text-white transition duration-300 !rounded-button whitespace-nowrap cursor-pointer"
-            onClick={() => openWpp()}
+            onClick={() => openWpp(seeAllProductsMessage)}
           >
             Ver todos os produtos
           </button>
