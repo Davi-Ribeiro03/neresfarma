@@ -5,7 +5,7 @@ const Contact = () => {
     <div className="bg-blue-900 text-white py-2 px-4">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-4">
-          <div className="flex items-center">
+          <div className="hidden sm:flex items-center ">
             <i className="fas fa-phone-alt mr-2"></i>
             <span>{telephone}</span>
           </div>
