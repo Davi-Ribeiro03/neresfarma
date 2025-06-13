@@ -54,12 +54,12 @@ const Header = () => {
             <nav
               className={`${
                 menuActive ? "hidden" : "flex"
-              }  flex-col absolute top-8 right-[-80px] bg-white text-2xl w-[80%] rounded-xl pt-4 md:flex md:static md:flex-row md:justify-end space-x-8`}
+              }  flex-col absolute top-8 right-[-80px] bg-white  w-[80%] sm:w-[60%] rounded-xl pt-4 md:flex md:static md:flex-row md:justify-end space-x-8`}
             >
               {navlinks.map(({ title, href }) => (
                 <a
                   href={href}
-                  className="text-blue-900 font-medium md:hover:text-blue-700 hover:bg-blue-700 hover:text-white p-6 md:p-2 rounded-xl cursor-pointer whitespace-nowrap"
+                  className="text-blue-900 font-medium  md:hover:text-blue-700  hover:text-white p-6 md:p-2 rounded-xl cursor-pointer whitespace-nowrap"
                   onClick={() => setMenuActive((prev) => !prev)}
                 >
                   {title}
