@@ -43,18 +43,10 @@ const Slide = () => {
         }
         return prev + 1;
       });
-      //   if (currentSlide === slides.length - 2) {
-      //     console.log("Entrou aqui");
-
-      //     return setCurrentSlide(0);
-      //   }
-      //   return setCurrentSlide((prev) => prev + 1);
     }, 5000);
 
     return () => clearInterval(interval);
   }, []);
-
-  //   console.log(currentSlide);
 
   return (
     <section className="relative h-[500px] overflow-hidden">
