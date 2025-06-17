@@ -31,7 +31,7 @@ const Location = () => {
               Horário de Funcionamento
             </h3>
             <p className="text-gray-600">
-              Segunda a Sábado: 7h às 21h
+              Segunda a Sábado: 7h às 12h | 14h30 às 21h
               <br />
               Domingo: 7h às 12h
             </p>
