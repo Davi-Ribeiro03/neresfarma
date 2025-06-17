@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { openWpp } from "../../utils/openWpp";
+import { motion } from "motion/react";
 
 const Products = () => {
   const featuredProducts = [
@@ -62,22 +63,15 @@ const Products = () => {
               Confira nossas ofertas especiais e produtos mais vendidos
             </p>
           </div>
-          {/* <div className="flex space-x-2">
-            <button className="px-4 py-2 border border-blue-900 text-blue-900 rounded-full hover:bg-blue-900 hover:text-white transition duration-300 !rounded-button whitespace-nowrap cursor-pointer">
-              Medicamentos
-            </button>
-            <button className="px-4 py-2 border border-blue-900 text-blue-900 rounded-full hover:bg-blue-900 hover:text-white transition duration-300 !rounded-button whitespace-nowrap cursor-pointer">
-              Cosméticos
-            </button>
-            <button className="px-4 py-2 border border-blue-900 text-blue-900 rounded-full hover:bg-blue-900 hover:text-white transition duration-300 !rounded-button whitespace-nowrap cursor-pointer">
-              Higiene
-            </button>
-          </div> */}
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {featuredProducts.map((product) => (
-            <div
+          {featuredProducts.map((product, index) => (
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.2 * index }}
+              viewport={{ once: true }}
               key={product.id}
               className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl"
             >
@@ -110,7 +104,7 @@ const Products = () => {
                   Comprar
                 </button>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 

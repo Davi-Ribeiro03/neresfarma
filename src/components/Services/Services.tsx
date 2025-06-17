@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 const Services = () => {
   const services = [
     {
@@ -40,10 +42,14 @@ const Services = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service) => (
-            <div
+          {services.map((service, index) => (
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.2 * index }}
+              viewport={{ once: true }}
               key={service.id}
-              className="bg-blue-50 rounded-lg p-6 transition-all duration-300 hover:shadow-lg text-center"
+              className="bg-blue-50 rounded-lg p-6 duration-300 hover:shadow-lg text-center"
             >
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i className={`${service.icon} text-blue-900 text-2xl`}></i>
@@ -52,7 +58,7 @@ const Services = () => {
                 {service.title}
               </h3>
               <p className="text-gray-600 mb-4">{service.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
