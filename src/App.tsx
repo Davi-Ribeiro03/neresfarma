@@ -8,6 +8,7 @@ import Location from "./components/Location/Location";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import WppButton from "./components/WppButton/WppButton";
+import AboutUs from "./components/AboutUs/AboutUs";
 
 const App: React.FC = () => {
   return (
@@ -16,7 +17,7 @@ const App: React.FC = () => {
       <main>
         {/* Hero Slider */}
         <Slide />
-        {/* Services Section */}
+        <AboutUs />
         <Services />
         <Products />
         <Advantages />

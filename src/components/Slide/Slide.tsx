@@ -49,7 +49,7 @@ const Slide = () => {
   }, []);
 
   return (
-    <section className="relative h-[500px] overflow-hidden">
+    <section className="relative h-[calc(100vh-24px)] overflow-hidden">
       <div className="absolute inset-0">
         <img
           src={slides[currentSlide].image}

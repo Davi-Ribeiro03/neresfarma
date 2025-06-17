@@ -13,7 +13,11 @@ const Header = () => {
         href: "#",
       },
       {
-        title: "Seriços",
+        title: "Sobre nós",
+        href: "#aboutUs",
+      },
+      {
+        title: "Serviços",
         href: "#services",
       },
       {
@@ -53,11 +57,12 @@ const Header = () => {
 
             <nav
               className={`${
-                menuActive ? "hidden" : "flex"
+                menuActive ? "flex" : "hidden"
               }  flex-col absolute top-8 right-[-80px] bg-white  w-[80%] sm:w-[60%] rounded-xl pt-4 md:flex md:static md:flex-row md:justify-end space-x-8`}
             >
-              {navlinks.map(({ title, href }) => (
+              {navlinks.map(({ title, href }, index) => (
                 <a
+                  key={index}
                   href={href}
                   className="text-blue-900 font-medium  md:hover:text-blue-700  hover:text-white p-6 md:p-2 rounded-xl cursor-pointer whitespace-nowrap"
                   onClick={() => setMenuActive((prev) => !prev)}
@@ -68,7 +73,7 @@ const Header = () => {
             </nav>
 
             <button
-              className="md:hidden z-10"
+              className=" md:hidden z-10"
               onClick={() => setMenuActive((prev) => !prev)}
             >
               <i className="fas fa-bars text-blue-900 text-xl"></i>
