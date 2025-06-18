@@ -1,5 +1,6 @@
 import { address, email, telephone, wpp } from "../../Constants";
 import Logo from "../../assets/logo.svg";
+import { openWpp } from "../../utils/openWpp";
 
 const Footer = () => {
   return (
@@ -14,13 +15,14 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                onClick={() => openWpp()}
                 className="bg-blue-900 hover:bg-blue-800 w-10 h-10 rounded-full flex items-center justify-center transition duration-300 cursor-pointer"
               >
-                <i className="fab fa-facebook-f"></i>
+                <i className="fab fa-whatsapp"></i>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/neresfarmaoficial/"
+                target="_blank"
                 className="bg-blue-900 hover:bg-blue-800 w-10 h-10 rounded-full flex items-center justify-center transition duration-300 cursor-pointer"
               >
                 <i className="fab fa-instagram"></i>

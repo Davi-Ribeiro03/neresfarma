@@ -1,4 +1,5 @@
 import { telephone, wpp } from "../../../Constants";
+import { openWpp } from "../../../utils/openWpp";
 
 const Contact = () => {
   return (
@@ -15,14 +16,21 @@ const Contact = () => {
           </div>
         </div>
         <div className="flex items-center space-x-4">
-          <a href="#" className="hover:text-blue-200">
+          {/* <a href="#" className="hover:text-blue-200">
             <i className="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" className="hover:text-blue-200">
+          </a> */}
+          <a
+            href="https://www.instagram.com/neresfarmaoficial/"
+            target="_blank"
+            className="hover:text-blue-200"
+          >
             <i className="fab fa-instagram"></i>
           </a>
-          <a href="#" className="hover:text-blue-200">
-            <i className="fab fa-twitter"></i>
+          <a
+            onClick={() => openWpp()}
+            className="hover:text-blue-200 cursor-pointer"
+          >
+            <i className="fab fa-whatsapp"></i>
           </a>
         </div>
       </div>
