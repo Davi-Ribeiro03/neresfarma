@@ -1,3 +1,5 @@
+import aboutUsImage from "../../assets/aboutUs.jpg";
+
 const AboutUs = () => {
   return (
     <section className="bg-white py-16 px-6 md:px-20" id="aboutUs">
@@ -6,9 +8,9 @@ const AboutUs = () => {
       </h2>
       <div className="max-w-6xl mx-auto text-center flex flex-col items-center lg:flex-row justify-center bg-blue-50 p-10 rounded-2xl">
         <img
-          src="https://ascoferj.com.br/wp-content/uploads/2023/12/Works-Ascoferj-20.jpg"
+          src={aboutUsImage}
           alt="Equipe da farmácia"
-          className="mx-auto w-[100%] max-w-md "
+          className="mx-auto h-90 w-[80%]  md:w-[60%] rounded-2xl max-w-md "
         />
         <p className="text-gray-700 text-xl leading-relaxed max-w-3xl mx-auto w-full p-4 md:p-10 text-justify">
           Na Neres Farma, cuidamos da sua saúde com carinho e atenção. Somos uma

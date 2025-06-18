@@ -1,44 +1,44 @@
 import { useMemo } from "react";
 import { openWpp } from "../../utils/openWpp";
 import { motion } from "motion/react";
+import Miosan from "../../assets/miosan.png";
+import Belfaren from "../../assets/belfaren.png";
+import Sabonete from "../../assets/sabonete.png";
+import Cloreto from "../../assets/cloreto-magnesio.png";
 
 const Products = () => {
   const featuredProducts = [
     {
       id: 1,
-      name: "Vitamina C 1000mg",
+      name: "Belfaren",
       price: "R$ 45,90",
       oldPrice: "R$ 59,90",
       discount: "23%",
-      image:
-        "https://readdy.ai/api/search-image?query=vitamin%20c%20supplement%20bottle%20on%20clean%20white%20background%2C%20professional%20product%20photography%20with%20soft%20shadows%2C%20high%20resolution%20detailed%20image%20of%20orange%20vitamin%20c%20tablets&width=300&height=300&seq=4&orientation=squarish",
+      image: Belfaren,
     },
     {
       id: 2,
-      name: "Protetor Solar FPS 50",
+      name: "Cloreto de Magnésio",
       price: "R$ 89,90",
       oldPrice: "R$ 109,90",
       discount: "18%",
-      image:
-        "https://readdy.ai/api/search-image?query=sunscreen%20spf%2050%20bottle%20on%20clean%20white%20background%2C%20professional%20product%20photography%20with%20soft%20shadows%2C%20high%20resolution%20detailed%20image%20of%20premium%20sunscreen%20product&width=300&height=300&seq=5&orientation=squarish",
+      image: Cloreto,
     },
     {
       id: 3,
-      name: "Termômetro Digital",
+      name: "Miosan",
       price: "R$ 29,90",
       oldPrice: "R$ 39,90",
       discount: "25%",
-      image:
-        "https://readdy.ai/api/search-image?query=digital%20thermometer%20on%20clean%20white%20background%2C%20professional%20product%20photography%20with%20soft%20shadows%2C%20high%20resolution%20detailed%20image%20of%20modern%20medical%20thermometer&width=300&height=300&seq=6&orientation=squarish",
+      image: Miosan,
     },
     {
       id: 4,
-      name: "Máscara Facial Hidratante",
+      name: "Sabonete",
       price: "R$ 19,90",
       oldPrice: "R$ 24,90",
       discount: "20%",
-      image:
-        "https://readdy.ai/api/search-image?query=hydrating%20face%20mask%20package%20on%20clean%20white%20background%2C%20professional%20product%20photography%20with%20soft%20shadows%2C%20high%20resolution%20detailed%20image%20of%20premium%20skincare%20product&width=300&height=300&seq=7&orientation=squarish",
+      image: Sabonete,
     },
   ];
 
@@ -75,11 +75,11 @@ const Products = () => {
               key={product.id}
               className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl"
             >
-              <div className="relative">
+              <div className="relative flex items-center justify-center w-full h-auto rounded-lg bg-gradient-to-br from-white to-gray-200 shadow-[40px_40px_60px_-20px_rgba(0,0,0,0.1)]">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-64 object-contain transition-all hover:scale-110 cursor-pointer"
                 />
                 <div className="absolute top-3 right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
                   -{product.discount}
